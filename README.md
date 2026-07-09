@@ -1,2 +1,2 @@
 # site-setor-ti
-## site institucional
+## site institucional do setor de ti
