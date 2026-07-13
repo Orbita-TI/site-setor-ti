@@ -1,1 +1,1 @@
-O Renan é Lindo❤️
+O Renan é Lindo
