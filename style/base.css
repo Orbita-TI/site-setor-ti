@@ -1,0 +1,49 @@
+:root{
+    
+--cor-primaria: rgb(5 22 50); 
+--cor-primaria-escura:rgb(236 239 255);
+--cor-secundaria: rgb(0 47 76) ;
+
+
+--cor-titulo:  rgb(219 228 255); 
+--cor-texto:  rgb(255 255 255); 
+--cor-texto-suave: rgb(255 255 255) ; 
+
+--cor-superficie: rgb(224 227 229);
+--cor-superficie-alt:rgb(184 198 235);; 
+--cor-borda: rgb(224 227 229);
+
+/* Gradiente do herói */
+--gradiente-heroi: linear-gradient(135deg, #4F46E5, #06B6D4);
+
+
+--fonte-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+Helvetica, Arial, sans-serif;
+
+/* Escala de espaçamento (mantém o ritmo vertical consistente) */
+--espaco-xs: 0.5rem;
+--espaco-sm: 0.75rem;
+--espaco-md: 1rem;
+--espaco-lg: 1.5rem;
+--espaco-xl: 2rem;
+--espaco-2xl: 3rem;
+--espaco-3xl: 5rem;
+
+/* Cantos arredondados */
+--raio-sm: 8px;
+--raio-md: 14px;
+--raio-lg: 22px;
+--raio-completo: 999px;
+
+/* Sombras suaves (elevação dos cartões) */
+--sombra-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+--sombra-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+--sombra-lg: 0 20px 45px rgba(15, 23, 42, 0.14);
+
+/* Transições */
+--transicao: 200ms ease;
+--transicao-lenta: 400ms ease;
+
+/* Largura máxima confortável de leitura/layout */
+--largura-conteudo: 1120px;
+}
