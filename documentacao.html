@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="documentacao.css">
 </head>
 <body>
-    <h1>Documentação projeto Site TI</h1>
+    <h1>Documentação projeto Site HTML, CSS - TI</h1>
     <h2>Rodapé</h2>
     <p>O rodapé (em inglês, footer) é a seção que fica localizada na parte inferior de todas as páginas de um site. Ele funciona como uma "âncora" para o conteúdo, servindo tanto para encerrar a navegação quanto para oferecer informações essenciais que não precisam estar no topo da página.<strong>&lt;footer&gt;</strong>.</p>
     <ul>
@@ -16,7 +17,10 @@
         <li>Logotipo e Breve Descrição: Para reforçar a identidade da marca.</li>
         <li>Credenciamento: Em sites institucionais.</li>
     </ul>
-    <p>Exemplo:</p>
+    <p><strong>Exemplo de Implementação:</strong></p>
+    <div class="container">
+    <div>
+    <p>HTML:</p>
     <pre><code><strong>&lt;footer</strong> class="rodape-simples"&gt;
   &lt;div class="rodape-conteudo"&gt;
     &lt;span class="rodape-logo"&gt;Minha Empresa&lt;/span&gt;
@@ -30,6 +34,26 @@
     &lt;small&gt;&amp;copy; 2026 Minha Empresa. Todos os direitos reservados.&lt;/small&gt;
   &lt;/div&gt;
 <strong>&lt;/footer&gt;</strong></code></pre>
+  </div>
+  <div>
+    <p>CSS:</p>
+    <pre><code>.rodape-simples {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.rodape-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.rodape-links a:hover {
+  color: #fff;
+}</code></pre>
+  </div>
+  </div>
     <h2>Card para o design de suporte</h2>
     <p>Card para design de suporte (frequentemente chamado de support card ou help card) é um elemento de interface de usuário (UI) projetado para facilitar o acesso de clientes ou colaboradores a canais de atendimento, centrais de ajuda ou resoluções de problemas.
 Eles são muito comuns em centrais de suporte, portais de autoatendimento, aplicativos e rodapés de sites corporativos.</p>
@@ -38,21 +62,183 @@ Eles são muito comuns em centrais de suporte, portais de autoatendimento, aplic
         <li>Linguagem Acessível: Sem termos técnicos difíceis. O usuário que procura suporte quer simplicidade.</li>
         <li>Acessibilidade: Garante um bom contraste de texto e que os botões sejam fáceis de clicar tanto no computador quanto no celular.</li>
     </ul>
-    <p>
+    <p><strong>Exemplo de Implementação:</strong></p>
+    <div class="container">
+      <div>
+    <p>HTML:</p>
         <pre><code>&lt;div class="support-card"&gt;
   &lt;div class="card-icon"&gt;
     &lt;!-- Ícone de Suporte (Ex: SVG de Balão de Chat) --&gt;
   &lt;/div&gt;
   &lt;h3&gt;Precisa de Ajuda?&lt;/h3&gt;
-  &lt;p&gt;Nossa equipe está disponível 24 horas por dia para tirar todas as suas dúvidas.&lt;/p&gt;
+  &lt;p&gt; Tire todas as suas dúvidas.&lt;/p&gt;
   &lt;button class="btn-support"&gt;Iniciar Chat&lt;/button&gt;
 &lt;/div&gt;</code></pre>
-
-    </p>
+    </div>
+    <div>
+      <p>CSS:</p>
+      <pre><code>.card {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+.btn {
+  padding: 6px 12px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}</code></pre>
+    </div>
+    </div>
     <h2>Avisos e notícias por data</h2>
+    <p>Essa seção do site é um feed de comunicados ou um mural de avisos. Sua função principal é manter os usuários (no caso, servidores e escolas) informados sobre atualizações importantes, manutenções técnicas e alertas de segurança de forma cronológica e organizada.</p>
+    <ul>
+      <li>O que é: Uma lista de cards ou itens organizados por data, destacando o dia e mês, seguidos por uma categoria (tag) e um resumo do aviso.</li>
+      <li>Função: Garantir a transparência e a comunicação eficiente. Ao separar por datas, o usuário identifica rapidamente o que é mais recente, facilitando a consulta de histórico de manutenções ou orientações.</li>
+    </ul>
+    <p><strong>Exemplo de Implementação:</strong></p>
+    <div class="container">
+      <div>
+      <p>HTML:</p>
+    <pre><code>&lt;section class="feed-avisos"&gt;
+  &lt;div class="card-aviso"&gt;
+    &lt;div class="data-box"&gt;
+      &lt;span class="dia"&gt;12&lt;/span&gt;
+      &lt;span class="mes"&gt;JUN&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="conteudo-aviso"&gt;
+      &lt;span class="tag"&gt;INFORMAÇÃO&lt;/span&gt;
+      &lt;h3&gt;Novo sistema de matrículas no ar&lt;/h3&gt;
+      &lt;p&gt;O portal de matrículas foi atualizado...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div>
+      <p>CSS:</p>
+      <pre><code>.card {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+.card.aviso { border-left-color: #e74c3c; }
+.card h3 { margin: 0 0 .5rem; font-size: 1.1rem; }
+.card p { margin: 0; font-size: .9rem; color: #555; }</code></pre>
+    </div>
+    </div>
     <h2>Sessão serviços</h2>
+    <P>A seção de Serviços, tem como objetivo apresentar as principais áreas de atuação do site em questão facilitando que servidores e usuários saibam exatamente onde buscar suporte, seja para manutenção, questões de rede ou sistemas de segurança da informação.</P>
+    <p><strong>Exemplo de Implementação:</strong></p>
+    <div class="container">
+      <div>
+      <p>HTML:</p>
+    <pre><code>&lt;section class="servicos"&gt;
+  &lt;h2&gt;Nossos Serviços&lt;/h2&gt;
+  &lt;div class="container-cards"&gt;
+    &lt;div class="card"&gt;
+      &lt;h3&gt;Suporte ao Usuário&lt;/h3&gt;
+      &lt;p&gt;Central de chamados.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div>
+      <p>CSS:</p>
+      <pre><code>.servicos {
+  display: grid;
+  /* Cria colunas automáticas de no mínimo 200px */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.card {
+  padding: 40px;
+  background: #eee;
+  text-align: center;
+  border: 1px solid #ccc;
+}</code></pre>
+    </div>
+    </div>
     <h2>Título, mensagem e banner</h2>
-    <h2></h2>
-
+    <p>O título, mensagem e banner são elementos visuais e textuais que desempenham um papel crucial na comunicação de informações importantes em um site. Eles são usados para chamar a atenção do usuário, transmitir mensagens-chave e reforçar a identidade visual da marca.</p>
+    <ul>
+        <li>Título: Geralmente é a primeira coisa que o usuário vê. Deve ser claro, conciso e refletir o conteúdo da página.</li>
+        <li>Mensagem: Complementa o título, fornecendo mais detalhes ou contexto. Pode ser uma frase curta ou um parágrafo.</li>
+        <li>Banner: Um elemento visual que pode incluir imagens, gráficos ou cores chamativas para atrair a atenção do usuário. Pode ser usado para promoções, anúncios ou informações importantes.</li>
+    </ul>
+    <p><strong>Exemplo de Implementação:</strong></p>
+    <div class="container">
+    <div>
+    <p>HTML:</p>
+    <pre><code>&lt;section class="banner-principal"&gt;
+  &lt;div class="conteudo-banner"&gt;
+    &lt;h1&gt;Tecnologia a serviço da educação&lt;/h1&gt;
+    &lt;p&gt;Soluções inteligentes para escolas e unidades administrativas.&lt;/p&gt;
+    &lt;button class="btn-cta"&gt;Saiba mais&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div>
+    <p>CSS:</p>
+    <pre><code>.banner-principal {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.conteudo-banner h1 {
+    color: #333;
+}
+.conteudo-banner p {
+    color: #666;
+}
+</code></pre>
+    </div>
+    </div>
+    <h2>Menu página inicial</h2>
+    <p>O menu da página inicial é um elemento de navegação crucial que permite aos usuários acessar rapidamente diferentes seções ou páginas do site. Ele deve ser intuitivo, responsivo e refletir a estrutura do conteúdo do site.</p>
+    <ul>
+        <li>Clareza: Os itens do menu devem ser claros e descritivos, evitando termos ambíguos.</li>
+        <li>Hierarquia: Organizar os itens de forma lógica, com categorias principais e subcategorias, se necessário.</li>
+        <li>Responsividade: O menu deve se adaptar a diferentes tamanhos de tela, especialmente em dispositivos móveis.</li>
+    </ul>
+    <p><strong>Exemplo de Implementação:</strong></p>
+    <div class="container">
+    <div>
+    <p>HTML:</p>
+    <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Início&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="sobre.html"&gt;O Setor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="servicos.html"&gt;Serviços&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="links.html"&gt;Links úteis&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contato.html"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+    </div>
+    <div>
+    <p>CSS:</p>
+    <pre><code>.menu-principal {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.menu-principal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-principal li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.menu-principal a {
+    text-decoration: none;
+    color: #333;
+}
+</code></pre>
+    </div>
+    </div>
 </body>
 </html>
