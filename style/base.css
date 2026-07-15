@@ -16,7 +16,7 @@
 /* Gradiente do herói */
 --gradiente-heroi: linear-gradient(135deg, #4F46E5, #06B6D4);
 
-/* Tipografia — Inter (Google Fonts) com fontes do sistema como reserva */
+
 --fonte-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
 Helvetica, Arial, sans-serif;
 
